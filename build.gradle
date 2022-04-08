@@ -1,0 +1,23 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    repositories{
+        google()
+        mavenCentral() // ini uda ada kayaknya di property?
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:7.1.2'//versi berapa gradle mu 7.3
+        classpath 'org.jetbrains.kotlin:kotlin-gradle-plugin:1.5.31'//versi berapakotlin? yang baru saja 1.6.0 butuh di update yg di android studiomu
+        classpath 'com.google.dagger:hilt-android-gradle-plugin:2.41'
+    }
+}
+/*plugins {
+    id 'com.android.application' version '7.2.0-alpha05' apply false
+    id 'com.android.library' version '7.2.0-alpha05' apply false
+    id 'org.jetbrains.kotlin.android' version '1.5.31' apply false // atau perlu diubah seperti ini ? krn model defaultnya harusnya nda ji karena yg di pake 7.2
+}*/
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
